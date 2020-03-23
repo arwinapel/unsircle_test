@@ -20,7 +20,7 @@ exports.register = async (req, res, next) => {
     try {
         const findUser = await Users.findOne({email: data.email})
         if (findUser) {
-            res.status(400).send("User already exists")
+            res.status(400).send("User already exists");
         } else {
             user.email = data.email;
             user.password = data.password;
